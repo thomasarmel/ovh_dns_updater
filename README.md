@@ -47,7 +47,11 @@ If you want to revoke the token, you can do it by using the API call DELETE /me/
 
 ### Installation:
 
+Install the Rust compilation toolchain by following the instructions on [rustup.rs](https://rustup.rs/).
+
 ```bash
+git clone https://github.com/thomasarmel/ovh_dns_updater.git
+cd ovh_dns_updater
 cargo build --release
 ```
 
