@@ -99,7 +99,10 @@ async fn manage_ip4_record_upgrade(
     println!("Recorded IP4: {:?}", recorded_ip4);
     if actual_ip4 != recorded_ip4 {
         println!("Updating IP4 record...");
-        match ovh_dns_updater.update_dns_ipv4(record_to_update, actual_ip4).await {
+        match ovh_dns_updater
+            .update_dns_ipv4(record_to_update, actual_ip4)
+            .await
+        {
             Ok(_) => (),
             Err(e) => {
                 eprintln!("Cannot update IPv4 record: {:?}", e);
@@ -137,7 +140,10 @@ async fn manage_ip6_record_upgrade(
     println!("Recorded IP6: {:?}", recorded_ip6);
     if actual_ip6 != recorded_ip6 {
         println!("Updating IP6 record");
-        match ovh_dns_updater.update_dns_ipv6(record_to_update, actual_ip6).await {
+        match ovh_dns_updater
+            .update_dns_ipv6(record_to_update, actual_ip6)
+            .await
+        {
             Ok(_) => (),
             Err(e) => {
                 eprintln!("Cannot update IPv6 record: {:?}", e);

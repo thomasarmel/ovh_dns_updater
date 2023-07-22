@@ -45,20 +45,6 @@ pub(crate) struct OvhClient {
 #[allow(dead_code)]
 impl OvhClient {
     /// Creates a new client from scratch.
-    ///
-    /// ```
-    /// use ovh::client::OvhClient;
-    ///
-    /// let app_key = "my_app_key";
-    /// let app_secret = "my_app_secret";
-    /// let consumer_key = "my_consumer_key";
-    ///
-    /// let client = OvhClient::new("ovh-eu", app_key, app_secret, consumer_key);
-    /// assert!(client.is_some());
-    ///
-    /// let client = OvhClient::new("wrong-endpoint", app_key, app_secret, consumer_key);
-    /// assert!(client.is_none());
-    /// ```
     pub(crate) fn new(
         endpoint: &str,
         application_key: &str,
